@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="images/favicon.ico">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/9ad97230c3.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Carattere&family=Roboto&display=swap" rel="stylesheet"> 
+
+
+    <title> Panier Orinoco </title>
+
+</head>
+
+<body>
+                      <!-- HEADER -->
+    <header class="border-top border-5 border-secondary">
+        <ul class="nav justify-content-end">           
+            <li class="nav-item">
+              <a class="nav-link" href="index.html" title="Compte"><i class="fas fa-user"></i></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#" title="Panier"><i class="fas fa-shopping-cart"></i></a>
+            </li>
+        </ul>    
+            
+        <div class="container-fluid">
+            <h1 class="text-center border-bottom border-5 border-secondary">Orinoco.</h1>
+            <p class="paragraphe"></p>
+        </div>
+
+    </header>
+                                         
+
+        <h2 class=" h1 text-center text-decoration-underline"><i class="bi bi-cart-check-fill"></i> Votre panier Orinoco.</h2> 
+            
+        <a href="index.html" class="btn btn-secondary m-3"><i class="bi bi-arrow-bar-left "></i> Retour</a>
+
+                                          <!-- MAIN -->
+
+    <main class="container ctnPanier" id="container">
+        
+        <!-- >>>CONTENU JAVASCRIPT ICI<<< -->
+        
+    </main>
+
+      
+
+        <div class="prixTotal text-center h2 text-decoration-underline m-3 "></div>
+                                   <!-- FORMULAIRE -->
+    <section>
+        <form id="form" class="container ">
+            <div class="form-row ">
+                <div class="form-group col-md-6">
+                    <label for="NomFormulaire">Nom <span id="champNom" class="text-danger "></span></label>
+                    <input type="text" required pattern="[a-zA-ZÀ-ÿ\-]{3,20}" class="form-control" id="NomFormulaire" placeholder="ex : Diaz">
+                </div>
+                
+                <div class="form-group col-md-6">
+                    <label for="PrenonFormulaire">Prénom <span id="champPrenom" class="text-danger"></span></label>
+                    <input type="text" required pattern="[a-zA-ZÀ-ÿ\-]{3,20}" class="form-control" id="PrenonFormulaire" placeholder="ex : Cameron">
+                </div>
+            </div>
+            <div class="form-group col-md-6">
+                <label for="AdresseFormulaire">Adresse <span id="champAdresse" class="text-danger"></span></label>
+                <input type="text" required pattern="[a-zA-ZÀ-ÿ\-\0-9]{5,50}" class="form-control" id="AdresseFormulaire" placeholder="ex : 12, rue de la vierge">
+            </div>
+            <div class="form-row ">
+                <div class="form-group col-md-6">
+                    <label for="VilleFormulaire">Ville <span id="champVille" class="text-danger"></span></label>
+                    <input type="text" required pattern="[a-zA-ZÀ-ÿ\-]{3,20}" class="form-control" id="VilleFormulaire" placeholder="ex : Lyon">
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="EmailFormulaire">Email <span id="champEmail" class="text-danger"></span></label>
+                    <input type="email" required pattern="[a-zA-Z0-9._-]+@[a-zA-Z0-9._-]+.[a-zA-Z.]{2,15}" class="form-control" id="EmailFormulaire" placeholder="ex : CameronDiaz@gmail.com">
+                </div>
+            </div>
+        
+            <button  class="btn btn-secondary m-3 btn-lg" id="buttonFormulaire" type="submit">Soumettre</button>          
+            
+        </form>
+
+    </section>
+
+                                       <!-- FOOTER -->
+
+    <footer class="border-top border-bottom border-5 border-secondary">
+        <div class="container ">
+            <div class="row pt-3"> 
+        
+                <div class="col-6 "><a href="mailto:" class="h3 text-dark ">Contactez-nous</a></div>
+                <div class="col-2 text-end"><a href="#" class="h3"><i class="bi bi-facebook"></i></a></div>
+                <div class="col-2 text-end"><a href="#" class="h3"><i class="bi bi-twitter"></i></a></div>
+                <div class="col-2 text-end"><a href="#" class="h3"><i class="bi bi-instagram"></i></a></div>
+        
+                <p class="h2 text-end mt-5">copyright 2021 - Orinoco</p>
+            </div>
+        </div>
+    </footer>
+    
+
+                                         <!-- SCRIPT JS -->
+
+    <script src="dossier.js/panier.js"></script>
+</body>
+</html>
