@@ -113,7 +113,7 @@ function supprimerArticle(id){
 let viderArticle = document.querySelectorAll(".suppArticle");
 // BOUCLE FOR SUR LES BOUTONS
  for (let a = 0; a < viderArticle.length; a++)
-// AU CLICK IL UTILISE LA FONCTION POUR SUPPRIMER UN ARTTICLE
+// AU CLICK IL UTILISE LA FONCTION POUR SUPPRIMER UN ARTICLE
  viderArticle[a].addEventListener("click", function (){
     supprimerArticle(viderArticle[a].dataset.id);
  })
@@ -128,9 +128,10 @@ function envoiPanier() {
       'lastName': document.querySelector("#PrenonFormulaire").value,
       'address': document.querySelector("#AdresseFormulaire").value,
       'city': document.querySelector("#VilleFormulaire").value,
-      'email': document.querySelector("#EmailFormulaire").value
+      'email': document.querySelector("#EmailFormulaire").value,
+    
     };
- 
+    
 
     let products = produitPanier;
     console.log(products);
