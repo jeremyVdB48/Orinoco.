@@ -1,4 +1,3 @@
-let container = document.querySelector("#container");
 
 main()
 // FONCTION ASYNCHRONE QUI RENVOI DES OBJETS AVEC LA BOUCLE FOR

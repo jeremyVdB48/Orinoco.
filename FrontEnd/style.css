@@ -3,10 +3,7 @@
 body{
     margin: 0;
     padding: 0;
-    font-family: "Carattere" , cursive;
-   
-    
-    
+    font-family: "Carattere" , cursive;      
 }
 .nav-link:hover{
     color: black;
@@ -25,8 +22,7 @@ footer{
 main{
     display: flex;
      justify-content: space-around;
-    flex-wrap: wrap; 
-     
+    flex-wrap: wrap;     
 }
 
                      /* PAGE INDEX.HTML */
