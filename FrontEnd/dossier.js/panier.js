@@ -9,7 +9,7 @@ let container = document.querySelector(".container");
 // INITIALISE LE PRIX TOTAL DU PANIER A 0
 let prixPanier = 0;
 
-//RECUPERATION ID PRODUIT
+//CREE UN TABLEAU
 let produitPanier = [];
 
 //FONCTION CALCUL PRIX TOTAL DU PANIER ET ENVOIE AU LOCAL STORAGE
@@ -122,6 +122,7 @@ let viderArticle = document.querySelectorAll(".suppArticle");
 
 function envoiPanier() {
   let form = document.querySelector("#form");
+ // SI LE RESULTAT DE MON FORMULAIRE EST TRUE(BON) ET QUE MON PANIER A AU MOINS 1 ARTICLE
   if (form.reportValidity() == true && produitPanier.length>0) {
     let contact = {
       'firstName': document.querySelector("#NomFormulaire").value,
@@ -135,7 +136,7 @@ function envoiPanier() {
 
     let products = produitPanier;
     console.log(products);
-
+    //CONVERTIT UNE VALEUR EN CHAINE JSON
     let formulaireClient = JSON.stringify({
       contact,
       products,
@@ -154,6 +155,7 @@ function envoiPanier() {
       .then(function (response) {
         return response.json()
       })
+      //ENVOIE SUR LA PAGE CONFIRMATION ET AFFICHE L'ID RECU DE L'API DANS L'URL
       .then(function (r) {
         window.location.assign("confirmation.html?orderId=" + r.orderId);
       })

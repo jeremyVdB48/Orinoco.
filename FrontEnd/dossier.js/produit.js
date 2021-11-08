@@ -3,7 +3,7 @@
 //RECUPERATION DE L URL
 let params = (new URL(document.location)).searchParams;
 
-//STOCK L'ID 
+//STOCK L'ID DANS UNE CONSTANTE
 const id = params.get("id");
 
 console.log(id);
@@ -98,7 +98,7 @@ const ajoutPanier = camera=> {
   camera.quantity = parseInt(document.querySelector('#quantity').value);
    camera.lenses = (document.querySelector("#option_lentilles").value);
 
-  //RECUPERE PANIER
+  //RECUPERE PANIER    
   let panier = localStorage.getItem('panier') ? JSON.parse(localStorage.getItem('panier')) : [];
 
   //BOUCLE FOR PARCOUR LIGNE PANIER

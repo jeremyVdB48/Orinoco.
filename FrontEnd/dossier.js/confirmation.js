@@ -1,5 +1,5 @@
 
-
+//RECUPERATION DE L'URL
 let paramsUrl = new URL(window.location).searchParams;
 // RECUPERATION DE L'ID ENVOYE PAR L'API
 let orderId = paramsUrl.get("orderId");
